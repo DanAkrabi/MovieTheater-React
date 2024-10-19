@@ -1,0 +1,240 @@
+.btn-container {
+  grid-area: buttons-area;
+  display: flex; /* For row layout */
+  flex-direction: column;
+  padding: 10px;
+  overflow: auto;
+  align-items: flex-start;
+}
+
+.web-desc {
+  display: flex;
+  text-align: center;
+  margin-top: 160px;
+  grid-area: 2/1/3/3;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.app-layout {
+  background-position: center;
+  position: relative;
+  display: grid;
+  grid-template-rows: 120px 120px 1fr;
+  grid-template-columns: 1fr 90px;
+  grid-template-areas:
+    "header header"
+    "search-bar search-bar"
+    "content-container buttons-area";
+}
+/* .app-layout {
+  background-position: center;
+  position: relative;
+  display: grid;
+  grid-template-rows: 120px 120px 1fr;
+  grid-template-columns: 1fr 100px;
+  grid-template-areas:
+    "header header"
+    "search-bar search-bar"
+    "content-container buttons-area";
+} */
+
+.intro-container {
+  background-color: #a1999999;
+  grid-area: 1 / 1 / 4 / 4;
+  border-radius: 20px;
+  width: 750px;
+  margin: 50px auto 0;
+  border: solid gray;
+  padding-bottom: 20px;
+}
+/* Adjusting the CSS for the hamburger button to fit into the grid properly */
+.btn-liked-movies {
+  padding: 0.4rem;
+  cursor: pointer;
+  border-radius: 10px;
+  grid-area: buttons-area;
+  /* position: absolute; */
+  border: solid rgb(129, 124, 124, 0.3);
+  /* left: 12px; */
+}
+
+/*css code from here belongs to the hamburger button*/
+
+.btn-liked-movies:hover {
+  box-shadow: 0 0 26px #d3d3d3;
+  transition: box-shadow 0.8s, background-color 0.8s;
+  background-color: #8f8f8f5e;
+}
+
+.hamburger-button {
+  height: 50px;
+  width: 50px;
+
+  position: relative;
+}
+.hamburger-button span {
+  height: 5px;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+
+.hamburger-button span:nth-child(1) {
+  top: 25%;
+}
+.hamburger-button span:nth-child(3) {
+  top: 75%;
+}
+
+.hamburger-button.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: red;
+
+  transition: background-color 0.2;
+}
+.hamburger-button.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-button.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background-color: red;
+  transition: background-color 0.2;
+}
+/*css code from here belongs to the delete all movies button*/
+/* .btn-delete-liked-movies-icon {
+  background: transparent;
+  position: relative;
+  width: 68px;
+  height: 68px;
+  border-radius: 4.5px;
+  transition: box-shadow 0.2s ease;
+  grid-area: buttons-area;
+
+  cursor: pointer;
+  border: solid rgb(129, 124, 124, 0.3);
+  border-radius: 10px;
+} */
+
+.btn-delete-liked-movies-icon:hover {
+  box-shadow: 0 0 26px #d3d3d3;
+  transition: box-shadow 0.8s, background-color 0.8s;
+  background-color: #8f8f8f5e;
+}
+
+/* .lid {
+
+  width: 42px;
+  height: 8px;
+} */
+
+.lidcap {
+  position: absolute;
+  bottom: 40.5px;
+  left: 26px;
+  height: 3px;
+  width: 6px;
+}
+.bin {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: 30px;
+  border-top: 36px solid #111;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+/* .lid,
+.lidcap {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #111;
+  transition: transform 0.2s linear, margin 0.2s linear;
+} */
+
+.btn-delete-liked-movies-icon:hover .lid,
+.btn-delete-liked-movies-icon:hover .lidcap {
+  transform: rotateX(14deg);
+  margin-bottom: 7px;
+}
+
+/* .bin {
+  position: absolute;
+  right: 31px;
+  top: 341px;
+  width: 30px;
+  border-top: 36px solid #111;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+} */
+.bin {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: 30px;
+  border-top: 36px solid #111;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+.c {
+  position: absolute;
+  border-radius: 0px;
+  width: 2.5px;
+  height: 25px;
+  background-color: #fff;
+  bottom: 6px;
+}
+
+.c.cut1 {
+  left: 18px;
+  transform: rotate(5deg);
+}
+.c.cut2 {
+  right: 18px;
+  transform: rotate(-5deg);
+}
+
+.btn-delete-liked-movies-icon:hover .lid,
+.btn-delete-liked-movies-icon:hover .lidcap {
+  background-color: red;
+  transition: background-color 0.7s;
+}
+.btn-delete-liked-movies-icon:hover .bin {
+  border-top-color: red;
+  transition: border-top-color 0.7s;
+}
+.btn-delete-liked-movies-icon {
+  background: transparent;
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  border-radius: 4.5px;
+  transition: box-shadow 0.2s ease;
+  grid-area: buttons-area;
+  top: 95px;
+  left: 15.3px;
+  border: transparent;
+  cursor: pointer;
+  border: solid rgb(129, 124, 124, 0.3);
+}
+.lid,
+.lidcap {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #111;
+  transition: transform 0.2s linear, margin 0.2s linear;
+}
+.lid {
+  position: absolute;
+  bottom: 36px;
+  left: 9px;
+  width: 42px;
+  height: 8px;
+}
