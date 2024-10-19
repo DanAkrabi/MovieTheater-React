@@ -127,7 +127,7 @@ export default function DetailsBox({ selectedId }) {
         </span>
       ) : (
         <>
-          <div className="grid-container">
+          <div className="details-box-container">
             <header className="title">
               <strong>{title}</strong>
             </header>
@@ -147,24 +147,26 @@ export default function DetailsBox({ selectedId }) {
 
               {/* {Rating > 0 ? `you rated with ${movieRating}` : ""} */}
             </div>
-            <StarRating
-              className="rating"
-              maxRating={10}
-              size={18}
-              onSetRating={(rating) =>
-                handleStarRating(movieDetails.imdbID, rating)
-              }
-            />
-            {starRating[movieDetails.imdbID] > 0 ? (
-              <p className="rating-msg" style={styles}>
-                You rated this movie
-                <strong>{starRating[movieDetails.imdbID]}</strong> ⭐
-              </p>
-            ) : (
-              <p className="rating-msg" style={styles}>
-                you havent rated this movie yet.
-              </p>
-            )}
+            <div className="star-rating-container">
+              <StarRating
+                className="rating"
+                maxRating={10}
+                size={18}
+                onSetRating={(rating) =>
+                  handleStarRating(movieDetails.imdbID, rating)
+                }
+              />
+              {starRating[movieDetails.imdbID] > 0 ? (
+                <p className="rating-msg" style={styles}>
+                  You rated this movie
+                  <strong>{starRating[movieDetails.imdbID]}</strong> ⭐
+                </p>
+              ) : (
+                <p className="rating-msg" style={styles}>
+                  you havent rated this movie yet.
+                </p>
+              )}
+            </div>
             <section className="movie-desc">
               <p>
                 <em>{plot}</em>
