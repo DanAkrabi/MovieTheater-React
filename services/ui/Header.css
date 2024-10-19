@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* .headline {
+  margin-top: 50px;
+  text-align: center;
+  z-index: 999;
+  background-color: rgb(221, 22, 211);
+  place-content: center;
+  grid-area: 1/1/2/3;
+} */
+.headline {
+  margin-top: 100px;
+  text-align: center;
+  z-index: 999;
+  place-content: center;
+  grid-area: 1 / 1 / 2 / 3;
+  color: #1f1f1f;
+}
+/* 
+.headline h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  color: #222;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: 27px 0;
+  grid-gap: 20px;
+  align-items: center;
+} */

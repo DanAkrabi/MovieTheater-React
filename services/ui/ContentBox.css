@@ -1,0 +1,66 @@
+.content-box {
+  background-color: rgba(88, 88, 88, 0.42);
+  /* display: flex;
+  flex-wrap: wrap; */
+  /* margin: 0 auto; */
+  max-width: 81vw;
+  border-radius: 8.2px;
+  /* min-height: 800px; */
+  /* position: relative; */
+  /* box-shadow: 2px 3px 35px rgb(29, 28, 28); */
+  /* border: solid 3px rgb(53, 52, 52); */
+  /* position: relative; */
+  /* width: 90%; */
+  /* width: minmax(0.8fr, 100px); */
+  /* align-items: center; */
+  grid-area: content-container;
+  box-shadow: 0 0 15px #b9b1b1;
+  /* width: 1000px; */
+  /* grid-area: 3/1/4/4; */
+  width: 1200px;
+  /* position: absolute; */
+  /* justify-content: space-evenly; */
+}
+.content-container {
+  grid-area: content-container;
+  display: flex;
+  place-content: flex-end;
+  margin-right: 15px;
+}
+
+.content-box p {
+  font-size: 50px;
+  display: flex;
+  place-content: center;
+  margin-top: 50px;
+  text-align: center;
+  width: 100%; /* Ensures the <p> element takes full width of the container */
+}
+
+.content-box .loader {
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; Correct this to horizontally center the loader */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #fff;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  overflow: hidden;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

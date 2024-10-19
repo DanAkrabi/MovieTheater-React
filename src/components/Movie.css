@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.movie-item {
+  display: grid;
+  grid-template-rows: 0.3fr 2fr 0.4fr; /*here we can fix the width of each movie item if the browser is small*/
+  grid-template-columns: 1fr;
+  border-radius: 10px;
+  grid-template-areas:
+    "title "
+    "img"
+    "year";
+  overflow: hidden;
+  box-shadow: 0 0 19px #000;
+  transition: transform 0.2s;
+  cursor: pointer;
+  justify-content: center;
+  background-color: #0000004d;
+  position: relative;
+  overflow: visible;
+}
+/* .movie-item {
+  display: grid;
+  grid-template-rows: 0.3fr 2fr 0.4fr;
+  grid-template-columns: 1fr;
+  border-radius: 10px;
+  grid-template-areas:
+    "title "
+    "img"
+    "year";
+  overflow: hidden;
+  box-shadow: 0 0 19px #000;
+  transition: transform 0.2s;
+  cursor: pointer;
+  justify-content: center;
+  background-color: #0000004d;
+  position: relative;
+  overflow: visible;
+} */
+.movie-item:hover {
+  box-shadow: 0 0 15px #918f8fb3;
+  transform: scale(1.05);
+}
+
+/* .movie-title {
+  margin-bottom: 9px;
+  margin-top: 11px;
+  display: flex;
+  border: 1px solid rgb(138, 133, 133);
+  border-right: transparent;
+  border-left: transparent;
+  transition: background-color 0.75s;
+  place-content: center;
+  place-items: center;
+  text-align: center;
+  font-size: calc(6px + 0.5vw);
+  padding: 4px;
+} */
+.movie-title {
+  margin-bottom: 9px;
+  margin-top: 11px;
+  display: flex;
+  border: 1px solid rgb(138, 133, 133);
+  border-right: transparent;
+  border-left: transparent;
+  transition: background-color 0.75s;
+  place-content: center;
+  place-items: center;
+  text-align: center;
+  font-size: calc(6px + 0.5vw);
+  padding: 4px;
+  color: #c5c5c5;
+}
+.movie-year {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  grid-area: year;
+  position: absolute;
+  right: 0%;
+  top: 18%;
+  font-size: 16px;
+  border: 1px solid rgb(138, 133, 133);
+  border-right: transparent;
+  border-left: transparent;
+  transition: background-color 0.75s;
+  color: #c5c5c5;
+}
+.movie-item:hover .movie-title {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.movie-item:hover .movie-year {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* .movie-img {
+  grid-area: img;
+  object-fit: contain;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+} */
+.movie-img {
+  grid-area: img;
+  position: absolute;
+  top: 10px;
+
+  object-fit: contain;
+  width: 100%;
+  height: 95%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* .movie-rating {
+  position: absolute;
+  top: -10%; -33.9px
+  left: 50%; 94px
+  transform: scale(0.58); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.movie-rating {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: scale(0.58);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movie-rating-number {
+  position: absolute;
+  transform: scale(0.5);
+  left: 43%; /*81px*/
+  top: 12.5%; /*8.3px*/
+  display: flex;
+  align-items: center; /* ממרכז את הטקסט והאימוג'י ורטיקלית */
+  justify-content: center;
+}
+
+.movie-rating-number10 {
+  position: absolute;
+  transform: scale(0.5);
+  left: 36.8%; /*68.35px*/
+  top: 13%; /*8.3px*/
+  display: flex;
+  align-items: center; /* ממרכז את הטקסט והאימוג'י ורטיקלית */
+  justify-content: center;
+}
