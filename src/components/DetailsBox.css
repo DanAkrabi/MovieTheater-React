@@ -10,6 +10,8 @@
   border: 3px solid #000000; /* White border, change color as needed */
   /* box-shadow: 0 4px 6px rgba(3, 10, 5, 0.1); Optional: adds shadow for 3D effect */
   z-index: 1050; /* Make sure it's above other content */
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
 }
 
 .btn-add-to-list:hover {
@@ -18,7 +20,7 @@
 .btn-back:hover {
   opacity: 0.7;
 }
-.grid-container {
+.details-box-container {
   display: grid;
   position: relative;
   grid-template-columns: 222px 222px; /* was 3fr 2fr, need to check whats better*/
@@ -51,6 +53,7 @@
   align-items: center; /* Vertically centers the content */
   font-size: 20px;
   text-align: center;
+  color: rgb(216, 210, 210);
 }
 .title:hover {
   transform: scale(1.08);
@@ -58,12 +61,12 @@
 .details-overview {
   grid-area: movie-data;
   position: relative;
-  top: 17px;
   display: flex;
   flex-direction: column;
   place-content: center;
   padding-right: 49px;
-  gap: 2.29rem;
+  /* gap: 2.29rem; */
+  color: rgb(216, 210, 210);
 }
 
 .details-overview p {
@@ -77,33 +80,49 @@
 .movie-desc p {
   grid-area: description;
   font-size: 13px;
-  display: flex;
-  flex-direction: column;
+
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .movie-desc {
-  grid-area: description; /* מגדיר את כל הקונטיינר להשתמש באזור ה'זה' */
-  position: relative;
-  top: 47px;
+  grid-area: description;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  /* top: 47px; */
   padding-left: 5px;
   padding-right: 5px;
+  color: rgb(216, 210, 210);
 }
-
+.star-rating-container {
+  background-color: rgba(65, 61, 61, 0.5);
+  width: 220px;
+  border-radius: 10px;
+  height: 65px;
+  position: absolute;
+  top: 262px;
+  right: 11px;
+}
+.star-rating-container:hover {
+  transform: scale(1.04);
+}
 .rating {
   grid-area: star-rating;
   position: relative;
   padding-right: 20px;
-  top: 18px;
+  top: 10px;
+  padding-left: 4px;
 }
 .rating:hover {
   transform: scale(1.03);
 }
 .rating-msg {
   position: relative;
-  top: 21px;
-  right: 21px;
+  top: -29px;
+  right: 15px;
   grid-area: rating-msg;
   z-index: 1000;
+  color: rgb(216, 210, 210);
 }
 .rating-msg p {
   font-size: 2vw;
